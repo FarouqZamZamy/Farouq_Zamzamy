@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -130,3 +131,137 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formulir Tiket Hololive ✦ GUMI</title>
+  <link rel="stylesheet" href="styletabel.css" />
+</head>
+<body>
+
+  <main class="container">
+    <header class="header">
+      <img src="Images/Gumi Small.png" alt="Hololive Logo" class="holo-logo" />
+      <h1>Formulir Pendaftaran Tiket<br><span class="highlight">Hololive ✦ GUMI Concert</span></h1>
+      <p class="subtitle">Isi data berikut untuk mendapatkan tiket konser spesial kolaborasi GUMI x Hololive.</p>
+    </header>
+
+    <form id="ticket-form" class="ticket-form" action="#" method="post" novalidate>
+      <table class="form-table">
+        <tbody>
+          <tr>
+            <th><label for="fullname">Nama Lengkap</label></th>
+            <td><input id="fullname" name="fullname" type="text" required placeholder="Nama sesuai identitas"></td>
+          </tr>
+
+          <tr>
+            <th><label for="email">Email</label></th>
+            <td><input id="email" name="email" type="email" required placeholder="contoh@domain.com"></td>
+          </tr>
+
+          <tr>
+            <th><label for="phone">No. Telepon</label></th>
+            <td><input id="phone" name="phone" type="tel" placeholder="+62 812-3456-7890" required></td>
+          </tr>
+
+          <tr>
+            <th><label for="event-date">Tanggal Acara</label></th>
+            <td><input id="event-date" name="event_date" type="date" required></td>
+          </tr>
+
+          <tr>
+            <th><label for="ticket-type">Tipe Tiket</label></th>
+            <td>
+              <select id="ticket-type" name="ticket_type" required>
+                <option value="">— Pilih tipe —</option>
+                <option value="general">General Admission</option>
+                <option value="vip">VIP (Meet & Greet)</option>
+                <option value="vvip">VVIP (Meet, Photo, Merchandise)</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <th><label for="quantity">Jumlah Tiket</label></th>
+            <td><input id="quantity" name="quantity" type="number" min="1" max="10" value="1" required></td>
+          </tr>
+
+          <tr>
+            <th><label>Area Tempat Duduk</label></th>
+            <td>
+              <label class="radio"><input type="radio" name="seat" value="front" checked> Depan</label>
+              <label class="radio"><input type="radio" name="seat" value="middle"> Tengah</label>
+              <label class="radio"><input type="radio" name="seat" value="back"> Belakang</label>
+            </td>
+          </tr>
+
+          <tr>
+            <th><label for="notes">Catatan</label></th>
+            <td><textarea id="notes" name="notes" rows="3" placeholder="Tuliskan permintaan khusus atau komentar..."></textarea></td>
+          </tr>
+
+          <tr>
+            <th><label for="payment">Metode Pembayaran</label></th>
+            <td>
+              <select id="payment" name="payment" required>
+                <option value="">— Pilih metode —</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="card">Kartu Kredit / Debit</option>
+                <option value="e-wallet">E-Wallet</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Konfirmasi</th>
+            <td>
+              <label class="checkbox">
+                <input id="terms" name="terms" type="checkbox" required>
+                Saya setuju dengan <a href="#">syarat & ketentuan</a>.
+              </label>
+            </td>
+          </tr>
+
+          <tr class="form-actions-row">
+            <td colspan="2" class="actions">
+              <button type="submit" class="btn primary">🎫 Daftar & Bayar</button>
+              <button type="reset" class="btn neutral">🔄 Reset</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+    <div id="form-message" class="form-message" aria-live="polite"></div>
+  </main>
+
+  <div class="back-container">
+    <a href="index.html" class="back-btn">⬅️ Kembali ke Halaman Utama</a>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Hololive ✦ GUMI Collaboration Event Fanmade </p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('ticket-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      const name = form.fullname.value;
+      const msg = document.getElementById('form-message');
+      msg.textContent = `Terima kasih, ${name}! Tiketmu berhasil didaftarkan. Selamat menantikan konser GUMI x Hololive! 🎶`;
+      msg.classList.add('visible');
+      msg.scrollIntoView({behavior:'smooth'});
+    });
+  </script>
+
+</body>
+</html>
+>>>>>>> 129e062 (commit pertama)

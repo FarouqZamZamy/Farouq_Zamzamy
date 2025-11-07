@@ -1,0 +1,197 @@
+:root {
+  --holo-blue: #00b8ff;
+  --gumi-green: #7fff7f;
+  --holo-bg: #f0faff;
+  --text-dark: #222;
+  --muted: #666;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --border: #d6efff;
+  --gradient: linear-gradient(135deg, var(--holo-blue), var(--gumi-green));
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background-image: url(Images/the\ ril\ download.jpg);
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.holo-logo {
+  width: 160px;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 24px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.form-table {
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px var(--shadow);
+  border-collapse: collapse;
+  overflow: hidden;
+  animation: fadeIn 1s ease;
+}
+
+th {
+  width: 30%;
+  text-align: left;
+  padding: 14px 20px;
+  background: rgba(0, 184, 255, 0.05);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+td {
+  padding: 14px 20px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fefefe;
+  transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--holo-blue);
+  box-shadow: 0 0 8px rgba(0, 184, 255, 0.3);
+}
+
+.radio {
+  margin-right: 15px;
+  font-size: 14px;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+.checkbox a {
+  color: var(--holo-blue);
+  text-decoration: none;
+}
+.checkbox a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn.primary {
+  background: var(--gradient);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 184, 255, 0.4);
+}
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 184, 255, 0.5);
+}
+.btn.neutral {
+  background: #e9faff;
+  color: #333;
+  margin-left: 10px;
+}
+.btn.neutral:hover {
+  background: #dff7ff;
+}
+
+.form-actions-row .actions {
+  text-align: right;
+  background: rgba(0, 184, 255, 0.05);
+  padding: 16px 24px;
+}
+
+.form-message {
+  margin-top: 18px;
+  display: none;
+  background: #e6fff4;
+  color: #007a50;
+  border: 1px solid #a6ffd0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  box-shadow: 0 2px 8px rgba(0, 184, 255, 0.15);
+  animation: fadeIn 0.6s ease;
+}
+.form-message.visible {
+  display: block;
+}
+
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin: 50px 0 20px 0;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 700px) {
+  th, td {
+    display: block;
+    width: 100%;
+  }
+  th {
+    background: transparent;
+    padding-bottom: 4px;
+  }
+  td {
+    padding-top: 0;
+  }
+  .form-actions-row .actions {
+    text-align: center;
+  }
+}
+
+.back-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.back-btn {
+  background-color: #43e97b;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.back-btn:hover {
+  background-color: #38b46f;
+  transform: scale(1.05);
+}
